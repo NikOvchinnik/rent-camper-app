@@ -1,0 +1,22 @@
+.headerContainer {
+  background-color: var(--button);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 10px 20px;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.logoContainer {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  margin-right: 30px;
+}
