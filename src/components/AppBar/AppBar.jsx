@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
-import style from './AppBar.module.css'
+import style from './AppBar.module.css';
 
 const AppBar = () => {
   return (
@@ -12,9 +12,30 @@ const AppBar = () => {
             <p>RentCamper</p>
           </div>
         </NavLink>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorites">Favorites</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? style.navLinkActive : style.navLink
+          }
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/catalog"
+          className={({ isActive }) =>
+            isActive ? style.navLinkActive : style.navLink
+          }
+        >
+          Catalog
+        </NavLink>
+        <NavLink
+          to="/favorites"
+          className={({ isActive }) =>
+            isActive ? style.navLinkActive : style.navLink
+          }
+        >
+          Favorites
+        </NavLink>
       </nav>
     </header>
   );

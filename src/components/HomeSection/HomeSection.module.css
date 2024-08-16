@@ -6,8 +6,7 @@
   border-radius: 30px;
   background: var(--inputs);
   padding: 24px;
-  position: relative;
-  width: 672px;
+  width: 664px;
   height: 80vh;
   text-align: center;
 }
@@ -18,19 +17,13 @@
 }
 
 .homeTitle {
-  font-weight: 700;
   font-size: 80px;
   line-height: 95%;
   letter-spacing: -0.01em;
   margin-bottom: 32px;
 }
 
-.homeThumb {
-  display: flex;
-  gap: 16px;
-}
-
-.homeTracker {
+.homeLink {
   border-radius: 200px;
   padding: 16px 40px;
   background: var(--button);
@@ -38,5 +31,10 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.01em;
-  color: #fff;
+  color: var(--background);
+}
+
+.homeLink:hover,
+.homeLink:focus {
+  background: #d84343;
 }

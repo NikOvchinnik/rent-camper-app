@@ -3,18 +3,18 @@ import style from './AdvantageSection.module.css';
 const AdvantagesSection = () => {
   return (
     <div className={style.advantagesContainer}>
-      <ul className={style.groupList}>
-        <li className={style.groupListItem}>
+      <ul className={style.advantagesList}>
+        <li className={style.advantagesItem}>
           <div className={style.ellipse}></div>
-          <p className={style.groupListItemText}>Easy Booking</p>
+          <p>Easy Booking</p>
         </li>
-        <li className={style.groupListItem}>
+        <li className={style.advantagesItem}>
           <div className={style.ellipse}></div>
-          <p className={style.groupListItemTextBlack}>Affordable Prices</p>
+          <p>Affordable Prices</p>
         </li>
-        <li className={style.groupListItem}>
+        <li className={style.advantagesItem}>
           <div className={style.ellipse}></div>
-          <p className={style.groupListItemTextBlack}>User Favorites</p>
+          <p>User Favorites</p>
         </li>
       </ul>
     </div>

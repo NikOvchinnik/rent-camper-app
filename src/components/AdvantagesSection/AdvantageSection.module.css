@@ -1,5 +1,5 @@
 .advantagesContainer {
-  width: 672px;
+  width: 664px;
   height: 80vh;
   border-radius: 30px;
   background-image: url(../../images/camper.jpg);
@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.groupList {
+.advantagesList {
   position: absolute;
   bottom: 32px;
   left: 16px;
@@ -18,7 +18,7 @@
   gap: 4px;
 }
 
-.groupListItem {
+.advantagesItem {
   padding: 9px 12px;
   display: flex;
   align-items: center;
@@ -26,7 +26,6 @@
   background-color: var(--button);
   color: var(--background);
   font-weight: 600;
-  font-size: 16px;
   line-height: 125%;
 }
 

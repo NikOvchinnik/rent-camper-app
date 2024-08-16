@@ -1,20 +1,19 @@
-import { Bars } from "react-loader-spinner";
+import { ColorRing } from 'react-loader-spinner';
+import style from './Loader.module.css';
 
 const Loader = () => {
   return (
-    <Bars
-      height="80"
-      width="80"
-      color="rgb(118, 107, 107)"
-      ariaLabel="bars-loading"
-      wrapperStyle={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-      wrapperClass=""
-      visible={true}
-    />
+    <div className={style.loaderContainer}>
+      <ColorRing
+        visible={true}
+        height="200"
+        width="200"
+        ariaLabel="color-ring-loading"
+        wrapperStyle={{}}
+        wrapperClass="color-ring-wrapper"
+        colors={['#F2B2B2', '#EB7A7A', '#E44848', '#B33737', '#7A2626']}
+      />
+    </div>
   );
 };
 

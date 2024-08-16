@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import style from "./HomeSection.module.css"
+import { NavLink } from 'react-router-dom';
+import style from './HomeSection.module.css';
 
 const HomeSection = () => {
   return (
@@ -8,11 +8,9 @@ const HomeSection = () => {
         Easily rent a camper and start your adventure
       </p>
       <h1 className={style.homeTitle}>Rent Camper App</h1>
-      <div className={style.homeThumb}>
-        <NavLink className={style.homeTracker} to="/signup">
-          Start renting
-        </NavLink>
-      </div>
+      <NavLink className={style.homeLink} to="/catalog">
+        Start renting
+      </NavLink>
     </div>
   );
 };
