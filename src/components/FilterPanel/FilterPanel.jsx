@@ -40,7 +40,7 @@ const FilterPanel = () => {
           className={style.locationInput}
           id={idLocation}
           type="text"
-          placeholder="Rent location"
+          placeholder="City"
           {...register('location')}
         />
         <Icon
@@ -100,7 +100,7 @@ const FilterPanel = () => {
                   value="TV"
                   {...register('equipment')}
                 />
-                <Icon id="tv" width="32" height="32" />
+                <Icon id="TV" width="32" height="32" />
                 TV
               </label>
             </li>
@@ -109,11 +109,11 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Conditioner"
+                  value="Shower"
                   {...register('equipment')}
                 />
-                <Icon id="conditioner" width="32" height="32" />
-                Conditioner
+                <Icon id="shower" width="32" height="32" />
+                Shower/WC
               </label>
             </li>
             <li className={style.itemContainer}>

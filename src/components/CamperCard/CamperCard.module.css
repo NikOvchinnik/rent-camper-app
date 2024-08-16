@@ -2,10 +2,6 @@
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   padding: 24px;
-  width: 888px;
-}
-
-.camperContainer {
   display: flex;
   gap: 24px;
 }
@@ -14,6 +10,15 @@
   border-radius: 10px;
   width: 290px;
   height: 310px;
+}
+
+.galleryImg {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover; 
 }
 
 .infoContainer {
@@ -65,10 +70,30 @@
 }
 
 .detailsList {
+  max-height: 96px;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 24px;
+  overflow-y: scroll;
+}
+
+.detailsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.detailsList::-webkit-scrollbar-track {
+  background-color: inherit; 
+  border-radius: 10px; 
+}
+
+.detailsList::-webkit-scrollbar-thumb {
+  background-color: #dfdddd;
+  border-radius: 10px;
+}
+
+.detailsList::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
 }
 
 .detailsItem {
@@ -91,4 +116,8 @@
   font-weight: 500;
   letter-spacing: -0.01em;
   color: var(--background);
+}
+
+.btnInfo:hover {
+  background: #d84343;
 }

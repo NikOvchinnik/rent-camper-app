@@ -95,3 +95,7 @@
   letter-spacing: -0.01em;
   color: var(--background);
 }
+
+.btnSubmit:hover {
+  background: #d84343;
+}

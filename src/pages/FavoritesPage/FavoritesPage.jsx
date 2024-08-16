@@ -1,11 +1,14 @@
-import DocTitle from "../../components/DocTitle";
+import DocTitle from '../../components/DocTitle';
+import style from './FavoritesPage.module.css';
 
 const FavoritesPage = () => {
   return (
-    <div>
+    <>
       <DocTitle>Favorites</DocTitle>
-      <h1>Favorites</h1>
-    </div>
+      <div className={style.favoritesContainer}>
+        <h1>Favorites</h1>
+      </div>
+    </>
   );
 };
 
