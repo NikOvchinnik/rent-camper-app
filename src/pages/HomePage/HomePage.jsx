@@ -1,12 +1,13 @@
 import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
 import DocTitle from "../../components/DocTitle";
 import HomeSection from "../../components/HomeSection/HomeSection";
+import style from './HomePage.module.css';
 
 const HomePage = () => {
   return (
     <main>
       <DocTitle>RentCamper</DocTitle>
-      <div>
+      <div className={style.homeContainer}>
         <HomeSection />
         <AdvantagesSection />
       </div>
