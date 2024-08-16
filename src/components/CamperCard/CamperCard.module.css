@@ -1,0 +1,94 @@
+.cardContainer {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+}
+
+.camperContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.galleryContainer {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+}
+
+.infoContainer {
+  width: 526px;
+}
+
+.priceContainer {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.nameTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.priceTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  margin-left: auto;
+  margin-right: 11px;
+}
+
+.reviewsContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reviewsText {
+  margin-left: 4px;
+  margin-right: 16px;
+  text-decoration: underline;
+}
+
+.locationText {
+  margin-left: 4px;
+}
+
+.descriptionText {
+  font-weight: 400;
+  color: var(--description);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}
+
+.detailsList {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.detailsItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  background: var(--block-features);
+  font-weight: 500;
+  line-height: 125%;
+  text-align: center;
+}
+
+.btnInfo {
+  border-radius: 200px;
+  padding: 16px 40px;
+  background: var(--button);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--background);
+}
