@@ -2,14 +2,16 @@
   background-color: var(--button);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding: 10px 20px;
+  padding: 15px 40px;
 }
 
 .navContainer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   color: #fff;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .logoContainer {
@@ -19,4 +21,6 @@
   justify-content: center;
   fill: #fff;
   margin-right: 30px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
