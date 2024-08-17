@@ -11,7 +11,7 @@ const FilterPanel = () => {
   const idLocation = useId();
 
   const defaultValues = {
-    location: 'Kyiv, Ukraine',
+    location: '',
     equipment: [],
     type: '',
   };
@@ -40,7 +40,7 @@ const FilterPanel = () => {
           className={style.locationInput}
           id={idLocation}
           type="text"
-          placeholder="City"
+          placeholder="Country, City"
           {...register('location')}
         />
         <Icon

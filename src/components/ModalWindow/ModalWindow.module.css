@@ -10,7 +10,7 @@
   background-color: var(--background);
   border-radius: 20px;
   padding: 40px;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
 }
 
