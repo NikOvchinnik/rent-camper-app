@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import Icon from '../Icon/Icon';
+import ModalWindow from '../ModalWindow/ModalWindow';
 import style from './CamperCard.module.css';
 
 const CamperCard = ({ data }) => {
+  const [isModalOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
+
   return (
     <li className={style.cardContainer}>
       <div className={style.galleryContainer}>
@@ -56,9 +68,10 @@ const CamperCard = ({ data }) => {
             );
           })}
         </ul>
-        <button className={style.btnInfo} type="button">
+        <button className={style.btnInfo} onClick={openModal} type="button">
           Show more
         </button>
+        <ModalWindow isModalOpen={isModalOpen} onCloseModal={closeModal} data={data} />
       </div>
     </li>
   );
