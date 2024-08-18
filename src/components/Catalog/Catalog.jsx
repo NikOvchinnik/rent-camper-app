@@ -1,9 +1,11 @@
-import campers from "../../campers.json"
+import { useSelector } from "react-redux";
 import CamperCard from "../CamperCard/CamperCard";
 import style from "./Catalog.module.css"
+import { selectFilteredCampers } from "../../redux/campers/selectors";
 
 const Catalog = () => {
-  
+  const campers = useSelector(selectFilteredCampers);
+
   return (
     <div className={style.catalogContainer}>
       <ul className={style.catalogList}>

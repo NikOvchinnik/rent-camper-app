@@ -4,10 +4,13 @@ import * as Yup from 'yup';
 import { useId } from 'react';
 import style from './FilterPanel.module.css';
 import Icon from '../Icon/Icon';
+import { useDispatch } from 'react-redux';
+import { changeFilters } from '../../redux/filters/slice';
 
 const schemaYup = Yup.object().shape({});
 
 const FilterPanel = () => {
+  const dispath = useDispatch();
   const idLocation = useId();
 
   const defaultValues = {
@@ -25,9 +28,8 @@ const FilterPanel = () => {
     resolver: yupResolver(schemaYup),
   });
 
-
   const onSubmit = data => {
-    console.log(data);
+    dispath(changeFilters(data));
   };
 
   return (
@@ -61,7 +63,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="AC"
+                  value="airConditioner"
                   {...register('equipment')}
                 />
                 <Icon id="ac" width="32" height="32" />
@@ -73,7 +75,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Automatic"
+                  value="automatic"
                   {...register('equipment')}
                 />
                 <Icon id="automatic" width="32" height="32" />
@@ -85,7 +87,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Kitchen"
+                  value="kitchen"
                   {...register('equipment')}
                 />
                 <Icon id="kitchen" width="32" height="32" />
@@ -109,7 +111,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Shower"
+                  value="shower"
                   {...register('equipment')}
                 />
                 <Icon id="shower" width="32" height="32" />
@@ -121,7 +123,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Freezer"
+                  value="freezer"
                   {...register('equipment')}
                 />
                 <Icon id="freezer" width="32" height="32" />
@@ -133,7 +135,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="checkbox"
-                  value="Microwave"
+                  value="microwave"
                   {...register('equipment')}
                 />
                 <Icon id="microwave" width="32" height="32" />
@@ -150,7 +152,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="radio"
-                  value="Van"
+                  value="van"
                   {...register('type')}
                 />
                 <Icon id="van" width="32" height="32" />
@@ -162,7 +164,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="radio"
-                  value="Fully Integrated"
+                  value="fullyIntegrated"
                   {...register('type')}
                 />
                 <Icon id="fully" width="32" height="32" />
@@ -174,7 +176,7 @@ const FilterPanel = () => {
                 <input
                   className={style.itemCheckbox}
                   type="radio"
-                  value="Alcove"
+                  value="alcove"
                   {...register('type')}
                 />
                 <Icon id="alcove" width="32" height="32" />
