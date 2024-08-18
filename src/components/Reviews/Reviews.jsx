@@ -2,7 +2,7 @@ import BookForma from '../BookForma/BookForma';
 import Icon from '../Icon/Icon';
 import style from './Reviews.module.css';
 
-const Reviews = ({ data, onCloseModal}) => {
+const Reviews = ({ data, onCloseModal }) => {
   return (
     <div className={style.reviewsContainer}>
       <ul className={style.reviewsList}>

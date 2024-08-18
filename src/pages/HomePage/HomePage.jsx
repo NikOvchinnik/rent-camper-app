@@ -1,6 +1,6 @@
-import Advantages from "../../components/AdvantagesSection/Advantages";
-import DocTitle from "../../components/DocTitle";
-import HomeSection from "../../components/HomeSection/HomeSection";
+import Advantages from '../../components/AdvantagesSection/Advantages';
+import DocTitle from '../../components/DocTitle';
+import HomeSection from '../../components/HomeSection/HomeSection';
 import style from './HomePage.module.css';
 
 const HomePage = () => {

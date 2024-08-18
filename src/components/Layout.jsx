@@ -1,6 +1,6 @@
-import { Suspense } from "react";
-import AppBar from "./AppBar/AppBar";
-import Loader from "./Loader/Loader";
+import { Suspense } from 'react';
+import AppBar from './AppBar/AppBar';
+import Loader from './Loader/Loader';
 
 export const Layout = ({ children }) => {
   return (

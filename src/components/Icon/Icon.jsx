@@ -1,4 +1,4 @@
-const Icon = ({ id, width, height, className = ''}) => {
+const Icon = ({ id, width, height, className = '' }) => {
   return (
     <svg
       className={`${className}`}
@@ -7,9 +7,7 @@ const Icon = ({ id, width, height, className = ''}) => {
       height={height}
       aria-hidden="true"
     >
-      <use
-        href={`/icons.svg#icon-${id}`}
-      ></use>
+      <use href={`/icons.svg#icon-${id}`}></use>
     </svg>
   );
 };

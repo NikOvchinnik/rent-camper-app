@@ -6,7 +6,7 @@ import style from './CatalogPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCampers } from '../../redux/campers/operations';
 import { selectLoading } from '../../redux/campers/selectors';
-import Loader from "../../components/Loader/Loader"
+import Loader from '../../components/Loader/Loader';
 import { changeFilters } from '../../redux/filters/slice';
 
 const CatalogPage = () => {
@@ -20,7 +20,7 @@ const CatalogPage = () => {
         equipment: [],
         type: '',
       })
-    ); 
+    );
     dispatch(fetchCampers());
   }, [dispatch]);
 

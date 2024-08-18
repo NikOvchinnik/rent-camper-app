@@ -22,8 +22,7 @@ const schemaYup = Yup.object().shape({
       ])
     )
     .nullable(),
-  type: Yup.string()
-    .oneOf(['van', 'fullyIntegrated', 'alcove', ''])
+  type: Yup.string().oneOf(['van', 'fullyIntegrated', 'alcove', '']),
 });
 
 const FilterPanel = () => {

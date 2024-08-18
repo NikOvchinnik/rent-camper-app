@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import CamperCard from '../CamperCard/CamperCard';
 import style from './Catalog.module.css';
-import { selectFilteredCampers} from '../../redux/campers/selectors';
+import { selectFilteredCampers } from '../../redux/campers/selectors';
 import { useState } from 'react';
 
 const Catalog = () => {

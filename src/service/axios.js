@@ -23,7 +23,6 @@ const request = async (
     return response.data;
   } catch (error) {
     if (error.response) {
-      // Запит був зроблений і сервер відповів кодом статусу, який виходить за межі 2xx
       if (error.response.status === 409) {
         Notify.failure('User with this email already exists!');
       } else if (error.request.responseURL.includes('login')) {
@@ -33,13 +32,11 @@ const request = async (
       }
       throw new Error('Error' + error.message);
     } else if (error.request) {
-      // Запит був зроблений, але відповіді не отримано
       Notify.failure(
         'Please check your internet connection or try again later'
       );
       throw new Error('No response received from server');
     } else {
-      // Щось трапилось при налаштуванні запиту
       Notify.failure('Oops something went wrong');
       throw new Error('Error in setting up request: ' + error.message);
     }
