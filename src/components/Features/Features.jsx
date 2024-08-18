@@ -2,7 +2,7 @@ import BookForma from '../BookForma/BookForma';
 import Icon from '../Icon/Icon';
 import style from './Features.module.css';
 
-const Features = ({ data }) => {
+const Features = ({ data, onCloseModal }) => {
   return (
     <div className={style.featuresContainer}>
       <div className={style.detailsContainer}>
@@ -56,7 +56,7 @@ const Features = ({ data }) => {
           </ul>
         </div>
       </div>
-      <BookForma/>
+      <BookForma onCloseModal={onCloseModal} />
     </div>
   );
 };

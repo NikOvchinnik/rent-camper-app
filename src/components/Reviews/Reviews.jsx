@@ -2,7 +2,7 @@ import BookForma from '../BookForma/BookForma';
 import Icon from '../Icon/Icon';
 import style from './Reviews.module.css';
 
-const Reviews = ({data}) => {
+const Reviews = ({ data, onCloseModal}) => {
   return (
     <div className={style.reviewsContainer}>
       <ul className={style.reviewsList}>
@@ -33,7 +33,7 @@ const Reviews = ({data}) => {
           );
         })}
       </ul>
-      <BookForma />
+      <BookForma onCloseModal={onCloseModal} />
     </div>
   );
 };

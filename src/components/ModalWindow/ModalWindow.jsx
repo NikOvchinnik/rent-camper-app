@@ -97,7 +97,11 @@ const ModalWindow = ({ isModalOpen, onCloseModal, data }) => {
             Reviews
           </button>
         </div>
-        {isFeaturesOpen ? <Features data={data} /> : <Reviews data={data} />}
+        {isFeaturesOpen ? (
+          <Features data={data} onCloseModal={onCloseModal} />
+        ) : (
+          <Reviews data={data} onCloseModal={onCloseModal} />
+        )}
       </div>
     </Modal>
   );

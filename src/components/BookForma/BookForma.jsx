@@ -2,10 +2,11 @@ import style from "./BookForma.module.css"
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const schemaYup = Yup.object().shape({});
 
-const BookForma = () => {
+const BookForma = ({ onCloseModal }) => {
   const defaultValues = {
     name: '',
     email: '',
@@ -23,7 +24,8 @@ const BookForma = () => {
   });
 
   const onSubmit = data => {
-    console.log(data);
+    Notify.success('Camper successfully booked!');
+    onCloseModal();
   };
 
   return (
