@@ -8,8 +8,6 @@ const Catalog = () => {
   const campers = useSelector(selectFilteredCampers);
   const [visibleCount, setVisibleCount] = useState(4);
 
-
-
   const handleLoadMore = () => {
     setVisibleCount(prevCount => prevCount + 4);
   };

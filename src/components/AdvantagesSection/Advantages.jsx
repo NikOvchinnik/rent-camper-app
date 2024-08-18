@@ -1,6 +1,6 @@
-import style from './AdvantageSection.module.css';
+import style from './Advantages.module.css';
 
-const AdvantagesSection = () => {
+const Advantages = () => {
   return (
     <div className={style.advantagesContainer}>
       <ul className={style.advantagesList}>
@@ -21,4 +21,4 @@ const AdvantagesSection = () => {
   );
 };
 
-export default AdvantagesSection;
+export default Advantages;

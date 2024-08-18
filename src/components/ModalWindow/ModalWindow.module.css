@@ -8,14 +8,14 @@
 .modalContainer {
   position: relative;
   background-color: var(--background);
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 40px;
   max-height: 85vh;
   overflow-y: auto;
 }
 
 .modalContainer::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .modalContainer::-webkit-scrollbar-track {

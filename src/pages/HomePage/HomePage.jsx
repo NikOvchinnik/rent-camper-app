@@ -1,4 +1,4 @@
-import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
+import Advantages from "../../components/AdvantagesSection/Advantages";
 import DocTitle from "../../components/DocTitle";
 import HomeSection from "../../components/HomeSection/HomeSection";
 import style from './HomePage.module.css';
@@ -9,7 +9,7 @@ const HomePage = () => {
       <DocTitle>RentCamper</DocTitle>
       <div className={style.homeContainer}>
         <HomeSection />
-        <AdvantagesSection />
+        <Advantages />
       </div>
     </main>
   );

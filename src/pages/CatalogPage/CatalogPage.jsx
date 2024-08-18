@@ -7,12 +7,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchCampers } from '../../redux/campers/operations';
 import { selectLoading } from '../../redux/campers/selectors';
 import Loader from "../../components/Loader/Loader"
+import { changeFilters } from '../../redux/filters/slice';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const loading = useSelector(selectLoading);
 
   useEffect(() => {
+    dispatch(
+      changeFilters({
+        location: '',
+        equipment: [],
+        type: '',
+      })
+    ); 
     dispatch(fetchCampers());
   }, [dispatch]);
 

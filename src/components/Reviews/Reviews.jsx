@@ -15,7 +15,6 @@ const Reviews = ({ data, onCloseModal}) => {
                 </div>
                 <div>
                   <h4 className={style.reviewerName}>{review.reviewer_name}</h4>
-                  {/* {<Icon id="star" width="16" height="16" />} */}
                   {Array.from({ length: review.reviewer_rating }).map(
                     (_, i) => (
                       <Icon key={i} id="star" width="16" height="16" />
