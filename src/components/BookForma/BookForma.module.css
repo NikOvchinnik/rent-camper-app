@@ -53,5 +53,12 @@
 }
 
 .formSubmit:hover {
-  background-color: #d84343;;
+  background-color: #d84343;
+}
+
+.errorsText {
+  color: var(--button);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
 }

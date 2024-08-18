@@ -7,7 +7,24 @@ import Icon from '../Icon/Icon';
 import { useDispatch } from 'react-redux';
 import { changeFilters } from '../../redux/filters/slice';
 
-const schemaYup = Yup.object().shape({});
+const schemaYup = Yup.object().shape({
+  location: Yup.string(),
+  equipment: Yup.array()
+    .of(
+      Yup.string().oneOf([
+        'airConditioner',
+        'automatic',
+        'kitchen',
+        'TV',
+        'shower',
+        'freezer',
+        'microwave',
+      ])
+    )
+    .nullable(),
+  type: Yup.string()
+    .oneOf(['van', 'fullyIntegrated', 'alcove', ''])
+});
 
 const FilterPanel = () => {
   const dispath = useDispatch();
@@ -29,6 +46,8 @@ const FilterPanel = () => {
   });
 
   const onSubmit = data => {
+    console.log(data);
+
     dispath(changeFilters(data));
   };
 
