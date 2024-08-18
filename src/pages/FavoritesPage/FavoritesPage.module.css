@@ -17,3 +17,7 @@
     gap: 32px;
     max-width: 888px;
 }
+
+.notFoundText{
+  color: var(--description);
+}

@@ -3,11 +3,14 @@ import Catalog from '../../components/Catalog/Catalog';
 import DocTitle from '../../components/DocTitle';
 import FilterPanel from '../../components/FilterPanel/FilterPanel';
 import style from './CatalogPage.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchCampers } from '../../redux/campers/operations';
+import { selectLoading } from '../../redux/campers/selectors';
+import Loader from "../../components/Loader/Loader"
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
+  const loading = useSelector(selectLoading);
 
   useEffect(() => {
     dispatch(fetchCampers());
@@ -17,8 +20,14 @@ const CatalogPage = () => {
     <>
       <DocTitle>Catalog</DocTitle>
       <div className={style.catalogContainer}>
-        <FilterPanel />
-        <Catalog />
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <FilterPanel />
+            <Catalog />
+          </>
+        )}
       </div>
     </>
   );

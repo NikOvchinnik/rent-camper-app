@@ -11,11 +11,9 @@ export const selectFilteredCampers = createSelector(
         camper.location
           .toLowerCase()
           .includes(filters.location.trim().toLowerCase()) &&
-          filters.equipment.every(filter => {   
-          return (
-            Object.keys(camper.details).includes(filter) ||
-            camper.transmission === filter
-          );
+        filters.equipment.every(filter => {
+          const detailValue = camper.details[filter];
+          return detailValue > 0 || camper.transmission === filter;
         }) &&
         camper.form.includes(filters.type)
       );

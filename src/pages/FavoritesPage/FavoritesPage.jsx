@@ -21,9 +21,7 @@ const FavoritesPage = () => {
             </ul>
           </>
         ) : (
-          <p className={style.notFoundText}>
-            No results found for the selected filters
-          </p>
+          <p className={style.notFoundText}>You have no favorite campers</p>
         )}
       </div>
     </>
