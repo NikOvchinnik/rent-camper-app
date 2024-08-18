@@ -8,14 +8,22 @@ const Catalog = () => {
 
   return (
     <div className={style.catalogContainer}>
-      <ul className={style.catalogList}>
-        {campers.map(camper => {
-          return <CamperCard key={camper.id} data={camper} />;
-        })}
-      </ul>
-      <button className={style.btnLoadMore} type="button">
-        Load more
-      </button>
+      {campers.length ? (
+        <>
+          <ul className={style.catalogList}>
+            {campers.map(camper => {
+              return <CamperCard key={camper._id} data={camper} />;
+            })}
+          </ul>
+          <button className={style.btnLoadMore} type="button">
+            Load more
+          </button>
+        </>
+      ) : (
+        <p className={style.notFoundText}>
+          No results found for the selected filters
+        </p>
+      )}
     </div>
   );
 };

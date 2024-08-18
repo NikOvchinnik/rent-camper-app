@@ -44,6 +44,10 @@
   margin-right: 11px;
 }
 
+.favoritesButton{
+  background-color: inherit;
+}
+
 .reviewsContainer {
   display: flex;
   align-items: center;

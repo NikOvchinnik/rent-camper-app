@@ -2,17 +2,35 @@ import { useState } from 'react';
 import Icon from '../Icon/Icon';
 import ModalWindow from '../ModalWindow/ModalWindow';
 import style from './CamperCard.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { addFavorites, removeFavorites } from '../../redux/favorites/slice';
+import { selectFavorites } from '../../redux/favorites/selectors';
 
 const CamperCard = ({ data }) => {
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
   const [isModalOpen, setModalIsOpen] = useState(false);
+  const [isFavoriteCamper, setIsFavoriteCamper] = useState(
+    favorites.some(camper => camper._id === data._id)
+  );
 
   const openModal = () => {
     setModalIsOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setModalIsOpen(false);
-  }
+  };
+
+  const handleClick = data => {
+    if (isFavoriteCamper) {
+      dispatch(removeFavorites(data._id));
+      setIsFavoriteCamper(false);
+    } else {
+      dispatch(addFavorites(data));
+      setIsFavoriteCamper(true);
+    }
+  };
 
   return (
     <li className={style.cardContainer}>
@@ -36,7 +54,16 @@ const CamperCard = ({ data }) => {
                 maximumFractionDigits: 2,
               })}
             </p>
-            <Icon id="heart" width="24" height="24" />
+            <button
+              onClick={() => handleClick(data)}
+              className={style.favoritesButton}
+            >
+              {isFavoriteCamper ? (
+                <Icon id="heart-red" width="24" height="24" />
+              ) : (
+                <Icon id="heart" width="24" height="24" />
+              )}
+            </button>
           </div>
           <div className={style.reviewsContainer}>
             <Icon id="star" width="16" height="16" />
@@ -71,7 +98,11 @@ const CamperCard = ({ data }) => {
         <button className={style.btnInfo} onClick={openModal} type="button">
           Show more
         </button>
-        <ModalWindow isModalOpen={isModalOpen} onCloseModal={closeModal} data={data} />
+        <ModalWindow
+          isModalOpen={isModalOpen}
+          onCloseModal={closeModal}
+          data={data}
+        />
       </div>
     </li>
   );
